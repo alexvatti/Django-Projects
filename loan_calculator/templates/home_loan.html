@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home Loan EMI Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            padding: 40px;
+            text-align: center;
+        }
+        .container {
+            background: #fff;
+            max-width: 500px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        input[type=range], input[type=number] {
+            width: 80%;
+        }
+        label {
+            display: block;
+            margin: 20px 0 5px;
+        }
+        button {
+            padding: 10px 25px;
+            background-color: #3498db;
+            border: none;
+            color: white;
+            font-weight: bold;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        .result {
+            margin-top: 30px;
+            background-color: #e0f7fa;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .back {
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>🏡 Home Loan EMI Calculator</h2>
+    <form method="post">
+        {% csrf_token %}
+
+        <label>Principal (₹): <span id="p_val">{{ request.POST.principal|default:'20000000' }}</span></label><br>
+        <input type="range" name="principal" min="1000000" max="50000000"
+            value="{{ request.POST.principal|default:'20000000' }}" step="100000"
+            oninput="document.getElementById('p_val').innerText = this.value"><br>
+
+        <label>Interest Rate (%): <span id="r_val">{{ request.POST.rate|default:'8.5' }}</span></label><br>
+        <input type="range" name="rate" min="5.0" max="15.0"
+            value="{{ request.POST.rate|default:'8.5' }}" step="0.1"
+            oninput="document.getElementById('r_val').innerText = this.value"><br>
+
+        <label>Tenure (Years): <span id="t_val">{{ request.POST.tenure|default:'20' }}</span></label><br>
+        <input type="range" name="tenure" min="1" max="30"
+            value="{{ request.POST.tenure|default:'20' }}" step="1"
+            oninput="document.getElementById('t_val').innerText = this.value"><br>
+
+        <button type="submit">Calculate EMI</button>
+    </form>
+
+
+    {% if result %}
+    <div class="result">
+        <h3>Monthly EMI: ₹{{ result.emi }}</h3>
+        <p>Total Payment: ₹{{ result.total_payment }}</p>
+        <p>Total Interest: ₹{{ result.total_interest }}</p>
+    </div>
+    {% endif %}
+
+    <div class="back"><a href="/">← Back to Home</a></div>
+</div>
+</body>
+</html>
