@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explore Your Dream Vacation</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background: linear-gradient(to right, #00b4db, #0083b0);
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+    }
+    header p {
+      font-size: 1.2rem;
+    }
+    .categories {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 40px 20px;
+    }
+    .category {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+    .category:hover {
+      transform: scale(1.03);
+    }
+    .category img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+    .category h2 {
+      font-size: 1.4rem;
+      padding: 15px;
+    }
+    .details {
+      padding: 0 15px 15px;
+    }
+    .details ul {
+      padding-left: 20px;
+      margin-top: 10px;
+    }
+    .details img {
+      width: 100%;
+      margin: 10px 0;
+      border-radius: 8px;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #222;
+      color: #eee;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🌍 Discover Your Perfect Getaway</h1>
+    <p>From peaceful retreats to thrilling adventures — we’ve got your dream trip covered.</p>
+  </header>
+
+  <section class="categories">
+    <div class="category">
+      <img src="https://www.beaches.com/blog/content/images/2020/05/Beaches-Turks-Caicos-Family-Walk-Beach.jpg" alt="Family">
+      <h2>👨‍👩‍👧‍👦 Family Tours</h2>
+      <div class="details">
+        <ul>
+          <li>Safe and relaxing destinations for all age groups</li>
+          <li>Kid-friendly activities and attractions</li>
+          <li>Resorts with family suites and meal packages</li>
+          <li>Group-friendly itineraries (theme parks, beaches)</li>
+          <li>Photos: families at beach, parks, resorts</li>
+        </ul>
+        <img src="http://pluspng.com/img-png/family-vacation-png-vacation-png-image-566.png" />
+        <img src="https://dr4f7gkjfgtsc.cloudfront.net/images/contents/summer-vacations-your-kids-wont-hate-family-vacation-ideas-1518472550.jpg" />
+        <img src="https://media-cldnry.s-nbcnews.com/image/upload/t_fit-760w,f_auto,q_auto:best/rockcms/2022-08/family-beach-vacation-te-220811-59ec25.jpg" />
+        <img src="https://www.explore.com/img/gallery/must-visit-family-vacation-destinations-in-the-us-that-both-kids-and-parents-will-love/intro-1688408159.jpg" />
+      </div>
+    </div>
+    <div class="category">
+      <img src="https://tse2.mm.bing.net/th?id=OIP.fHYgWJAkjn8OcD801UhVKwHaE8&pid=Api&P=0&h=180" alt="Friends">
+      <h2>🧑‍🤝‍🧑 Friends Getaways</h2>
+      <div class="details">
+        <ul>
+          <li>Fun-filled group adventures and nightlife</li>
+          <li>Hostels, shared villas, and budget hotels</li>
+          <li>Trekking, pool parties, and road trips</li>
+          <li>Activity-based travel: camping, music festivals</li>
+          <li>Photos: group fun, parties, nature trips</li>
+        </ul>
+        <img src="https://tse2.mm.bing.net/th?id=OIP.N83JUyAdC80J7VkPsfIyxgHaFU&pid=Api&P=0&h=180" />
+        <img src="https://tse2.mm.bing.net/th?id=OIP.sh6T4oP_3Q1DnLbU43O5awHaEY&pid=Api&P=0&h=180" />
+        <img src="https://tse2.mm.bing.net/th?id=OIP.tiRMAYAHabPJTFb72LDGJAHaD3&pid=Api&P=0&h=180" />
+        <img src="https://tse2.mm.bing.net/th?id=OIP.KbfTBS_N6-s1TUBTeZgBOgHaFE&pid=Api&P=0&h=180" />
+      </div>
+    </div>
+    <div class="category">
+      <img src="https://tse3.mm.bing.net/th?id=OIP.g2_a2KJ5ZEm7dR5Kk2GvagHaE8&pid=Api&P=0&h=180" alt="Honeymoon">
+      <h2>💑 Honeymoon Escapes</h2>
+      <div class="details">
+        <ul>
+          <li>Romantic resorts and candlelight dinners</li>
+          <li>Privacy-focused stays like villas or cottages</li>
+          <li>Beach walks, spa treatments, couple’s activities</li>
+          <li>Special experiences: boat rides, hot air balloons</li>
+          <li>Photos: couples, sunsets, scenic spots</li>
+        </ul>
+        <img src="https://tse1.mm.bing.net/th?id=OIP.hbvhRR5aid50WNFcu2TDOAHaEK&pid=Api&P=0&h=180" />
+        <img src="https://i0.wp.com/visitbalitour.com/wp-content/uploads/2022/08/honeymooner.jpg?resize=816%2C1024&ssl=1" />
+        <img src="https://tse1.mm.bing.net/th?id=OIP.00HYE8z8ciPnTMdsRR0lvQHaDn&pid=Api&P=0&h=180" />
+        <img src="https://c8.alamy.com/comp/2JB26PR/side-view-of-husband-kissing-his-wife-outdoor-traveling-together-honeymoon-vacation-2JB26PR.jpg" />
+      </div>
+    </div>
+    <div class="category">
+      <img src="https://tse2.mm.bing.net/th?id=OIP.lyqBDX_tOC6yodVhRNHoowHaE7&pid=Api&P=0&h=180" alt="Solo">
+      <h2>🧘 Solo Retreats</h2>
+      <div class="details">
+        <ul>
+          <li>Peaceful destinations to reconnect with yourself</li>
+          <li>Safe hostels and solo-friendly places</li>
+          <li>Yoga, journaling, photography zones</li>
+          <li>Guided solo tours and biking trips</li>
+          <li>Photos: lone traveler, nature, cozy spots</li>
+        </ul>
+        <img src="https://tse3.mm.bing.net/th?id=OIP.qrRbskjvOKJzKPsjuC7hqwAAAA&pid=Api&P=0&h=180" />
+        <img src="https://www.careysmanor.com/wp-content/uploads/2023/11/Man-relaxing-at-SenSpa-768x614.png" />
+        <img src="https://images.squarespace-cdn.com/content/v1/580ea73437c581ee0cd1ac3d/1552605046469-K81J5CHH2W8Q61ILVM9L/Beyond+Yoga+Retreat" />
+        <img src="https://www.tripsavvy.com/thmb/psgzPEjqoJwUynwVKs2TMI1mjxg=/2121x1414/filters:fill(auto,1)/woman-at-spa-resort-5c32911446e0fb0001a94970.jpg" />
+      </div>
+    </div>
+    <div class="category">
+      <img src="https://www.therandomvibez.com/wp-content/uploads/2024/08/Refresh-Your-Thirst-For-Adventure-Slogans.jpg" alt="Adventure">
+      <h2>🧗 Adventure & Refresh</h2>
+      <div class="details">
+        <ul>
+          <li>Mountain hikes, rafting, paragliding, safaris</li>
+          <li>Active vacations that recharge your spirit</li>
+          <li>Eco-camps and nature lodges</li>
+          <li>Fitness trips: cycling tours, surfing</li>
+          <li>Photos: action, thrill, nature scenes</li>
+        </ul>
+        <img src="https://www.oregonsadventurecoast.com/img/three-days-of-zen-itinerary-blog-695x322-jpg.jpg" />
+        <img src="https://www.muchbetteradventures.com/magazine/content/images/2021/09/GettyImages-1193774981--1-.jpg" />
+        <img src="https://www.theenews.in/wp-content/uploads/2024/05/Adventure-Sports-in-Maharashtra.jpg" />
+        <img src="https://tse2.mm.bing.net/th?id=OIP.1q5NGAP0xLuZ1lBpM08fUAHaFj&pid=Api&P=0&h=180" />
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Explore Vacations | Designed to Excite & Inspire 🌟
+  </footer>
+</body>
+</html>
