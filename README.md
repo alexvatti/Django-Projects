@@ -1,17 +1,43 @@
 # Django-Projects
 
-1. **Django**
 
-**pip install django**
 
-**django-admin startproject myproject**
+## 1. 🛠️ Django Project Setup
 
-**cd myproject**
+- **Install Django**
+  ```bash
+  pip install django
+````
 
-**python manage.py runserver**
+* **Start a New Project**
 
-**Open browser: http://127.0.0.1:8000/**
+  ```bash
+  django-admin startproject myproject
+  ```
 
-2. **Create an App**
-   
-   **python manage.py startapp myapp**
+* **Navigate into the Project Directory**
+
+  ```bash
+  cd myproject
+  ```
+
+* **Run the Development Server**
+
+  ```bash
+  python manage.py runserver
+  ```
+
+  > Open your browser and visit: [http://127.0.0.1:8000/](http://127.0.0.1:8000/)
+
+---
+
+## 2. 📦 Create an App
+
+* **Start a New App**
+
+  ```bash
+  python manage.py startapp myapp
+  ```
+
+
+
