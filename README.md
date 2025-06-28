@@ -7,7 +7,7 @@
 - **Install Django**
   ```bash
   pip install django
-````
+```
 
 * **Start a New Project**
 
