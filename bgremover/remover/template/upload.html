@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Remove Background</title>
+  <style>
+    /* Page layout */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f0f4f8;
+      color: #333;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+    }
+    .container {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      width: 100%;
+      max-width: 480px;
+      margin: 2em;
+      padding: 2em;
+    }
+
+    /* Header */
+    h1 {
+      text-align: center;
+      color: #1a73e8;
+      margin-bottom: 0.5em;
+    }
+
+    /* Description */
+    .description {
+      font-size: 0.95rem;
+      line-height: 1.5;
+      color: #555;
+      margin-bottom: 1.5em;
+      text-align: center;
+    }
+
+    /* Error message */
+    .error {
+      color: #c0392b;
+      background: #fdecea;
+      padding: 0.5em 1em;
+      border-radius: 6px;
+      margin-bottom: 1em;
+      text-align: center;
+    }
+
+    /* Form styling */
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+      align-items: center;
+    }
+    input[type="file"] {
+      padding: 0.5em;
+    }
+    button {
+      background: #1a73e8;
+      color: #fff;
+      border: none;
+      padding: 0.75em 1.5em;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background 0.2s ease;
+    }
+    button:hover {
+      background: #1558b0;
+    }
+
+    /* Result section */
+    .result {
+      margin-top: 2em;
+      text-align: center;
+    }
+    .result h2 {
+      color: #2c3e50;
+      margin-bottom: 0.5em;
+    }
+    .result img {
+      border: 4px solid #1a73e8;
+      border-radius: 8px;
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Remove Image Background</h1>
+
+    <p class="description">
+      Upload any image and instantly remove its background using a local.  
+      No external API or internet connection is required—everything runs right here in your browser!
+    </p>
+
+    {% if error %}
+      <div class="error">Error: {{ error }}</div>
+    {% endif %}
+
+    <form method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+      <input type="file" name="image" accept="image/*" required>
+      <button type="submit">Upload &amp; Remove BG</button>
+    </form>
+
+  {% if file_url %}
+    <div class="result">
+      <h2>Here’s Your Image:</h2>
+      <!-- use the URL, not the filesystem path -->
+      <img src="{{ file_url }}" alt="Background removed">
+      <p><small>Saved on disk at: {{ fs_path }}</small></p>
+    </div>
+  {% endif %}
+  </div>
+
+</body>
+</html>
+
